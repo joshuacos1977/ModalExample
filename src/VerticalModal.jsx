@@ -1,5 +1,5 @@
 import Modal from "react-bootstrap/Modal";
-import {  Button } from 'react-bootstrap';
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import OptionsMenu from './OptionsMenu';
 
@@ -19,14 +19,12 @@ const VerticalModal = (props) => {
                </Modal.Title>
          <Modal.Body>
              <h4>Brands</h4>
-              <OptionsMenu />
+              <OptionsMenu  onHide={props.onHide}/>
          </Modal.Body>
 
           </Modal.Header>
             
-          <Modal.Footer>
-               <Button  variant="primary" onClick={props.onHide}>Close</Button>
-         </Modal.Footer>  
+          
      </Modal>
      );
 }
